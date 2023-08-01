@@ -1,0 +1,144 @@
+.NavbarItems {
+    background: linear-gradient(90deg, rgb(247, 247, 247) 0%, rgb(125, 125, 128) 100%);
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar-logo {
+    color: rgb(65,88,208);
+    justify-self: auto;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+.fa-paw {
+    margin-left: 10px;
+    font-size: 1.6rem;
+    color: #fcb900;
+}
+
+.nav-menu {
+    display: grid;
+    grid-template-columns: repeat(5,auto);
+    grid-gap: 10px;
+    list-style: none;
+    text-align: center;
+    width: 70vw;
+    justify-content: end;
+    margin-right: 2rem;
+}
+
+.nav-links {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+}
+
+.nav-links:hover {
+    background-color: #fcb900;
+    border-radius: 4px;
+    transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+    color: white;
+    font-size: 2rem;
+}
+
+.nav-links-mobile {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .NavbarItems {
+        position: sticky;
+    }
+
+    .nav-menu {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 450px;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        opacity: 1;
+        transition: all 0.5s ease;
+    }
+
+    .nav-menu.active {
+        background: rgb(125, 125, 128);
+        left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+        z-index: 1;
+    }
+
+    .nav-links {
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: #fcb900;
+        color: rgb(65,88,208);
+        border-radius: 0;
+    }
+
+    .navbar-logo {
+        position: absolute;
+        top: 0;
+        left: 0;
+        transform: translate(25%,50%);
+    }
+
+    .menu-icon {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(-100%,60%);
+        font-size: 0.8rem;
+        cursor: pointer;
+    }
+
+    .fa-xmark {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .nav-links-mobile {
+        display: block;
+        text-align: center;
+        padding: 20px;
+        margin: 2rem auto;
+        border-radius: 4px;
+        width: 80%;
+        background: #fcb900;
+        text-decoration: none;
+        color: rgb(65,88,208);
+        font-size: 1.5rem;
+    }
+
+    .nav-links-mobile:hover {
+        background: white;
+        color: rgb(65,88,208);
+        transition: 250ms;
+    }
+
+    Button {
+        display: none;
+    }
+}
